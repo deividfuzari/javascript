@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div#area{
+            background-color: green;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 2em;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> <!--podemos fazer assim pelo html essas ações do DOM ou pelo JS-->
+        <h1>Interaja...</h1>
+    </div>
+    <script>
+        var area = window.document.getElementById('area')
+        area.addEventListener('click', clicar)              //da para fazer assim tambem pelo JS apenas digitando o evento ou a ação sem o 'ON' do html
+        area.addEventListener('mouseenter', entrar)         //da para fazer assim tambem pelo JS apenas digitando o evento ou a ação sem o 'ON' do html
+        area.addEventListener('mouseout', sair)             //da para fazer assim tambem pelo JS apenas digitando o evento ou a ação sem o 'ON' do html
+    
+        function clicar() {
+            area.innerText='CLIQUEI!'
+            area.style.background='gray'
+        }
+        function entrar() {
+            area.innerText='ENTROU!'
+            area.style.background='red'
+        }
+        function sair() {
+            area.innerText='SAIU!'
+            area.style.background='green'
+        }
+
+    </script>
+    
+</body>
+</html>
