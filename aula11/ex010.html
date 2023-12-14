@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistemas de multa</h1>
+    Velocidade do carro: <input type="number" name="txtv" id="txtv">km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="resul"></div>
+    <script>
+        function calcular() {
+            var vel = window.document.getElementById('txtv')
+            var result = window.document.querySelector('div#resul')
+            var velocidade = Number(vel.value)
+            result.innerHTML=`Voce está a ${velocidade}`
+            if (velocidade > 60) {
+                result.innerHTML += `<p>Voce foi <strong>MULTADO</strong>, ESTÁ A ${velocidade}KM/H</p>`
+            }
+            result.innerHTML += '<p>Dirija com cuidado</p>' //esse += concatena em string ele nao soma igual em numeros.
+    }
+    </script>
+    
+</body>
+</html>
