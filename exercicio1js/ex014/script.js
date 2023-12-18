@@ -4,7 +4,7 @@ function carregar() {
     var imgContainer = window.document.getElementById('foto')
     var data = new Date
     //var hora = data.getHours()
-    var hora = 13
+    var hora = 21
     msg.innerText = `Agora são exatamente ${hora} horas.`
     console.log(img)
     if ( hora > 0 && hora <12){
@@ -15,7 +15,7 @@ function carregar() {
         //boa tarde
         img.src = 'tarde.png'
         document.body.style.background = '#b9846f'
-        imgContainer.style.paddingLeft = '-100px'
+        
         console.log(img.style)
         
     }else{
